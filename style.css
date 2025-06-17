@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #4351ee;
+            --secondary: #005577;
+            --danger: #ef233c;
+        }
+
+        body {
+            background-color: #826b58;
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #685341;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: rgb(26, 26, 26);
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 1.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: rgb(26, 26, 26);
+        }
+
+        section {
+            padding: 6rem 2rem 2rem;
+        }
+
+        /* Home Section */
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            min-height: 100vh;
+        }
+
+        .home-img img {
+            width: 250px;
+            border-radius: 50%;
+            border: 4px solid rgb(26, 26, 26);
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h1 {
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .typing-text {
+            color: #000;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: #DAA06D;
+            color: rgb(26, 26, 26);
+            border: 2px solid rgb(26, 26, 26);
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: whitesmoke;
+            color: #000;
+        }
+
+        /* Common Styles for All Pages */
+        h2 {
+            color: rgb(26, 26, 26);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: rgb(26, 26, 26);
+            margin-top: 1rem;
+        }
+
+        ul {
+            list-style: square inside;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* About Page */
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Page */
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            color: rgb(26, 26, 26);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
+
+        .social-icons a i {
+            font-size: 1.5rem;
+        }
+
+        /* Weather Page */
+        #weather {
+            background-color: #73D7FF;
+            color: #000;
+            min-height: 100vh;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        #weather h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #weather-display {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .forecast {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+        }
+
+        .day {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0.5rem;
+            }
+
+            .home {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 8rem;
+            }
+
+            .home-img img {
+                width: 200px;
+            }
+
+            .forecast {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0.3rem;
+            }
+
+            .home-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .typing-text {
+                font-size: 1rem;
+            }
+
+            .forecast {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
